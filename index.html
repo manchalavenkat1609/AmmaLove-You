@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Love You Amma</title>
+</head>
+<body style="margin:0; padding:0; overflow:hidden; background: radial-gradient(circle, #ff9a9e, #fad0c4); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+  <!-- Floating hearts and balloons using animations -->
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+    <!-- Generate multiple heart elements -->
+    <script>
+      for (let i = 0; i < 20; i++) {
+        document.write(`
+          <div style="
+            position: absolute;
+            left: ${Math.random() * 100}%;
+            animation: float ${5 + Math.random() * 5}s ease-in-out infinite;
+            font-size: ${20 + Math.random() * 30}px;
+            color: rgba(255, 0, 100, 0.7);
+            top: ${100 + Math.random() * 100}%;
+          ">
+            ❤️
+          </div>
+        `);
+      }
+
+      for (let i = 0; i < 10; i++) {
+        document.write(`
+          <div style="
+            position: absolute;
+            left: ${Math.random() * 100}%;
+            animation: float ${6 + Math.random() * 6}s ease-in-out infinite;
+            font-size: ${30 + Math.random() * 20}px;
+            color: rgba(255, 192, 203, 0.7);
+            top: ${100 + Math.random() * 100}%;
+          ">
+            🎈
+          </div>
+        `);
+      }
+    </script>
+  </div>
+
+  <!-- Main content -->
+  <div style="position: relative; z-index: 1; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+    <div>
+      <h1 style="
+        font-size: 72px;
+        color: white;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+        transform: rotateX(20deg);
+      ">I Love You, <span style="color: #ff3366;">Amma</span> ❤️</h1>
+
+      <p style="
+        font-size: 24px;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        max-width: 600px;
+        margin: auto;
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(4px);
+      ">
+        You make my world brighter, Amma.<br>
+        Your smile melts all my worries away.<br>
+        You are the one I want to laugh with, grow with, and love forever. 💖<br><br>
+        Forever yours,
+        <br><span style="font-size: 28px; font-weight: bold;">Your Love 💌</span>
+      </p>
+
+      <div style="margin-top: 40px;">
+        <span style="font-size: 50px;">💘</span>
+        <span style="font-size: 50px;">🌹</span>
+        <span style="font-size: 50px;">💖</span>
+        <span style="font-size: 50px;">🎈</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyframes (inline CSS inside <style>) -->
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.8; }
+      50% { transform: translateY(-50vh) scale(1.2) rotate(15deg); opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1) rotate(-15deg); opacity: 0; }
+    }
+  </style>
+</body>
+</html>
